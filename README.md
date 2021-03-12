@@ -1,5 +1,13 @@
+
+# Generate a fake Json
+
+this link in bellow allows you to make a fake json
+
+[https://mocki.io/fake-json-api]
+
 ## fonction pour filter Tableau
->
+
+```javascript
 /**
  * filter table
  */
@@ -22,9 +30,11 @@ function myFunction() {
       }       
     }
   }
-</a>
+  ```
   ## fonction pour trier tableau
-<a name="general-info">
+
+  ```javascript
+
   /**
  * Sorts a HTML table.
  * 
@@ -68,4 +78,4 @@ document.querySelectorAll(".table-sortable th").forEach(headerCell => {
         sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
     });
 });
-</a>
+```
