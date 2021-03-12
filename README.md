@@ -17,7 +17,7 @@ function myFunction() {
         }
       }       
     }
-  }
+  };
 
   ## fonction pour trier tableau
 
