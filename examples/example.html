@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap-table filter example</title>
+	<link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../assets/css/tablesort.css" rel="stylesheet" >
+</head>
+<body>
+	
+	<div id="myTable" class="container">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for dates.." title="Type in a date">
+		<table class="table table-sortable">
+			<thead>
+				<tr>
+				  <th class="">Rank</th>
+				  <th>Name</th>
+				  <th>Price</th>
+				  <th>Date</th>
+				</tr>
+			  </thead>
+			<tbody id="data">
+			</tbody>
+		  </table>
+	</div>
+	<script type="text/javascript">
+		var table = [];
+		fetch('https://api.mocki.io/v1/12e56f1c').then(
+			res => {
+				res.json().then(
+					data => {
+						var temp = '';
+						if ( data.length > 0 ) {
+							data.forEach(element => {
+								temp+= '<tr>';
+								temp+= '<td>'+ element.id + '</td>';
+								temp+= '<td>'+ element.name + '</td>';
+								temp+= '<td>'+ element.price + '</td>';
+								temp+= '<td>'+ element.date + '</td>';
+								
+							});
+							document.getElementById('data').innerHTML = temp;
+						}
+					}
+				);
+			}
+		);
+	</script>
+	<script src="../src/tableSort.js"></script>
+	<script src="../src/filterTable.js"></script>
+</body>
+</html>
