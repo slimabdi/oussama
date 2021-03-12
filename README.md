@@ -1,5 +1,5 @@
 ## fonction pour filter Tableau
-
+>
 /**
  * filter table
  */
@@ -24,7 +24,7 @@ function myFunction() {
   }
 
   ## fonction pour trier tableau
-
+>
   /**
  * Sorts a HTML table.
  * 
