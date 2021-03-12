@@ -1,5 +1,7 @@
 ## fonction pour filter Tableau
 
+// filter table
+
 function myFunction() {
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
@@ -21,12 +23,12 @@ function myFunction() {
 
   ## fonction pour trier tableau
 
+  // Sort each row
+
 function sortTableByColumn(table, column, asc = true) {
     const dirModifier = asc ? 1 : -1;
     const tBody = table.tBodies[0];
     const rows = Array.from(tBody.querySelectorAll("tr"));
-
-    // Sort each row
     const sortedRows = rows.sort((a, b) => {
         const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
         const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
