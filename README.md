@@ -24,7 +24,7 @@ function myFunction() {
   }
 
   ## fonction pour trier tableau
->
+<a name="general-info">
   /**
  * Sorts a HTML table.
  * 
@@ -68,3 +68,4 @@ document.querySelectorAll(".table-sortable th").forEach(headerCell => {
         sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
     });
 });
+</a>
